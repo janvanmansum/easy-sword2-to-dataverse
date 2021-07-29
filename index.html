@@ -1,0 +1,972 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-dans-4.4.1">
+    
+    
+      
+        <title>dd-dans-deposit-to-dataverse</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/application.27a306a7.css">
+      
+      
+    
+    
+      <script src="assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700|Glegoo:300,400,400i,700|Ubuntu+Mono&display=swap">
+        <style>.body-type,body,input{font-family:"Open Sans",sans-serif}.head-type,h1,h2,h3,h4,h5{font-family:"Glegoo",serif}.code-type,code,kbd,pre{font-family:"Ubuntu Mono",monospace}</style>
+      
+    
+    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#dd-dans-deposit-to-dataverse" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://dans.knaw.nl/en" title="Data Archiving and Networked Services (DANS)" class="md-header-nav__button md-logo">
+          <img src="assets/images/DANS.gif" height="50">
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="." title="dd-dans-deposit-to-dataverse" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title head-type" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              dd-dans-deposit-to-dataverse
+              
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Manual
+              
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/DANS-KNAW/dd-dans-deposit-to-dataverse/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    DANS-KNAW/dd-dans-deposit-to-dataverse
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title head-type md-nav__title--site" for="__drawer">
+    <a href="." title="dd-dans-deposit-to-dataverse" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    dd-dans-deposit-to-dataverse
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/DANS-KNAW/dd-dans-deposit-to-dataverse/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    DANS-KNAW/dd-dans-deposit-to-dataverse
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active head-type" for="__toc">
+        Manual
+      </label>
+    
+    <a href="." title="Manual" class="md-nav__link md-nav__link--active head-type">
+      Manual
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title head-type" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" title="SYNOPSIS" class="md-nav__link head-type">
+    SYNOPSIS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" title="DESCRIPTION" class="md-nav__link head-type">
+    DESCRIPTION
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ways-to-run-the-program" title="Ways to run the program" class="md-nav__link head-type">
+    Ways to run the program
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-of-deposit-processing" title="Order of deposit processing" class="md-nav__link head-type">
+    Order of deposit processing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing-of-a-deposit" title="Processing of a deposit" class="md-nav__link head-type">
+    Processing of a deposit
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-deposit" title="Update-deposit" class="md-nav__link head-type">
+    Update-deposit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapping-to-dataverse-dataset" title="Mapping to Dataverse dataset" class="md-nav__link head-type">
+    Mapping to Dataverse dataset
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dataset-level-metadata" title="Dataset level metadata" class="md-nav__link head-type">
+    Dataset level metadata
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-level-metadata" title="File level metadata" class="md-nav__link head-type">
+    File level metadata
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description-attribute" title="Description attribute" class="md-nav__link head-type">
+    Description attribute
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permission-requests" title="Permission requests" class="md-nav__link head-type">
+    Permission requests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importing-pre-staged-files" title="Importing pre-staged files" class="md-nav__link head-type">
+    Importing pre-staged files
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link head-type">
+    Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mechanics" title="Mechanics" class="md-nav__link head-type">
+    Mechanics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arguments" title="ARGUMENTS" class="md-nav__link head-type">
+    ARGUMENTS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-and-configuration" title="INSTALLATION AND CONFIGURATION" class="md-nav__link head-type">
+    INSTALLATION AND CONFIGURATION
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-from-source" title="BUILDING FROM SOURCE" class="md-nav__link head-type">
+    BUILDING FROM SOURCE
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="deposit-directory/" title="Deposit directory" class="md-nav__link head-type">
+      Deposit directory
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title head-type" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" title="SYNOPSIS" class="md-nav__link head-type">
+    SYNOPSIS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" title="DESCRIPTION" class="md-nav__link head-type">
+    DESCRIPTION
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ways-to-run-the-program" title="Ways to run the program" class="md-nav__link head-type">
+    Ways to run the program
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-of-deposit-processing" title="Order of deposit processing" class="md-nav__link head-type">
+    Order of deposit processing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing-of-a-deposit" title="Processing of a deposit" class="md-nav__link head-type">
+    Processing of a deposit
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-deposit" title="Update-deposit" class="md-nav__link head-type">
+    Update-deposit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapping-to-dataverse-dataset" title="Mapping to Dataverse dataset" class="md-nav__link head-type">
+    Mapping to Dataverse dataset
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dataset-level-metadata" title="Dataset level metadata" class="md-nav__link head-type">
+    Dataset level metadata
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-level-metadata" title="File level metadata" class="md-nav__link head-type">
+    File level metadata
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description-attribute" title="Description attribute" class="md-nav__link head-type">
+    Description attribute
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permission-requests" title="Permission requests" class="md-nav__link head-type">
+    Permission requests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importing-pre-staged-files" title="Importing pre-staged files" class="md-nav__link head-type">
+    Importing pre-staged files
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link head-type">
+    Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mechanics" title="Mechanics" class="md-nav__link head-type">
+    Mechanics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arguments" title="ARGUMENTS" class="md-nav__link head-type">
+    ARGUMENTS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-and-configuration" title="INSTALLATION AND CONFIGURATION" class="md-nav__link head-type">
+    INSTALLATION AND CONFIGURATION
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-from-source" title="BUILDING FROM SOURCE" class="md-nav__link head-type">
+    BUILDING FROM SOURCE
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/DANS-KNAW/dd-dans-deposit-to-dataverse/edit/master/docs/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="dd-dans-deposit-to-dataverse">dd-dans-deposit-to-dataverse<a class="headerlink" href="#dd-dans-deposit-to-dataverse" title="Permanent link">&para;</a></h1>
+<p>Converts DANS deposit directories into Dataverse dataset-versions.</p>
+<h2 id="synopsis">SYNOPSIS<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>dd-dans-deposit-to-dataverse run-service
+dd-dans-deposit-to-dataverse import [--skip-validation] [-c,--continue] &lt;inbox&gt; &lt;outbox&gt;
+dd-dans-deposit-to-dataverse import [--skip-validation] -s &lt;single-deposit&gt; &lt;outbox&gt;
+</code></pre></div>
+
+<h2 id="description">DESCRIPTION<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<h3 id="ways-to-run-the-program">Ways to run the program<a class="headerlink" href="#ways-to-run-the-program" title="Permanent link">&para;</a></h3>
+<p>Converts one or more <a href="deposit-directory/">deposit directories</a> into Dataverse dataset-versions. 
+The <code>import</code> subcommand will read the deposit directories currently present in <code>&lt;inbox&gt;</code>, process those 
+and then exit. When run as a service (<code>run-service</code>) the tool will first enqueue all deposit directories 
+found in the configured inbox (so those will be processed first), but then it will also process newly 
+arriving deposit directories. </p>
+<div class="admonition note">
+<p class="admonition-title"><code>import</code> vs <code>run-service</code></p>
+<p>Import assumes that deposits are the results of an export from EASY. It will use Dataverse's 
+<a href="https://guides.dataverse.org/en/latest/api/native-api.html#import-a-dataset-into-a-dataverse-collection" target="_blank">import API</a>
+to create a dataset with the pre-existing DOI specified in <code>deposit.properties</code>. Likewise an 
+update-deposit will update the dataset with that DOI.</p>
+<p>The service on the other hand, will let Dataverse mint a new DOI in the case of a first version, and
+will look for the dataset with a matching SWORD-token in the case of an update-deposit.</p>
+</div>
+<h3 id="order-of-deposit-processing">Order of deposit processing<a class="headerlink" href="#order-of-deposit-processing" title="Permanent link">&para;</a></h3>
+<p>A deposit directory represents one dataset version. The version history of a datasets is represented
+by a sequence of deposit directories. When enqueueing deposits the program will first order them by the 
+timestamp in the <code>Created</code> element in the contained bag's <code>bag-info.txt</code> file.</p>
+<p>Note that, for deposits that are arriving when the tools is running as a service (<code>run-service</code>), the 
+correct order must be ensured by the client process, that is to say, by the process that is putting the
+deposits in the inbox.  </p>
+<h3 id="processing-of-a-deposit">Processing of a deposit<a class="headerlink" href="#processing-of-a-deposit" title="Permanent link">&para;</a></h3>
+<p>The processing of a deposit consists of the following steps:</p>
+<ol>
+<li>Check that the deposit is a valid <a href="deposit-directory/">deposit directory</a></li>
+<li>Check that the bag in the deposit is a valid DANS bag.</li>
+<li>Map the dataset level metadata to the metadata fields expected in the target Dataverse.</li>
+<li>If:<ul>
+<li>deposit represents first version of a dataset: create a new dataset draft.</li>
+<li>deposit represents an update to an existing dataset: <a href="#update-deposit">draft a new version</a></li>
+</ul>
+</li>
+<li>Publish the new dataset-version.</li>
+</ol>
+<h4 id="update-deposit">Update-deposit<a class="headerlink" href="#update-deposit" title="Permanent link">&para;</a></h4>
+<p>When receiving a deposit that specifies a new version for an existing dataset (an update-deposit) the assumption
+is that the bag contains the metadata and file data that must be in the new version. This means:</p>
+<ul>
+<li>The metadata specified completely overwrites the metadata in the latest version. So, even if the client needs to
+  change only one word, it must send all the existing metadata with only that particular word changed. Any 
+  metadata left out will be deleted.</li>
+<li>The files will replace the files in the latest version. So the files that are in the deposit are the ones
+  that will be in the new version. If a file is to be deleted from the new version, it should simply be left
+  out in the deposit. If a file is to remain unchanged in the new version, an exact copy of the current file must be sent.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">File path is key</p>
+<p>The local file path (that is, directoryLabel + name) is used as the key to determine what file in the
+latest published version, if any, is targetting. For example, to replace a published file with 
+label <code>foo.txt</code> and directoryLabel <code>my/special/folder</code>, the bag must contain the new version at
+<code>data/my/special/folder/foo.txt</code>. (Note that the directoryLabel is the path relative to the bag's 
+<code>data/</code> folder.)</p>
+</div>
+<h3 id="mapping-to-dataverse-dataset">Mapping to Dataverse dataset<a class="headerlink" href="#mapping-to-dataverse-dataset" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Target Dataverse variations in mapping</p>
+<p>In the current version of the tool there is only one target Dataverse, and therefore only one set of
+mapping rules. This will change in the future, as the target Dataverses will be different data stations <br />
+with different requirements.</p>
+</div>
+<h4 id="dataset-level-metadata">Dataset level metadata<a class="headerlink" href="#dataset-level-metadata" title="Permanent link">&para;</a></h4>
+<p>Per metadata block a mapping is defined from information in the deposit directory to the fields in the block. The
+details of these mappings are defined in internal document, but can be found in the <code>DepositToDvDatasetMetadataMapper.scala</code>
+class as well. </p>
+<p>If a block is found to be active in the targetted Dataverse instance, the mapping is executed, if the block is
+inactive, it is skipped.</p>
+<p>Mappings for the following blocks have been defined:</p>
+<ul>
+<li>Citation Metadata (<code>citation</code>)</li>
+<li>Rights Metadata (<code>dansRights</code>)</li>
+<li>Relation Metadata (<code>dansRelationMetadata</code>)</li>
+<li>Archaeology-Specific Metadata (<code>dansArchaeologyMetadata</code>)</li>
+<li>Temporal and Spatial Coverage (<code>dansTemporalSpatial</code>)</li>
+<li>Data Vault Metadata (<code>dansDataVaultMetadata</code>)</li>
+</ul>
+<h4 id="file-level-metadata">File level metadata<a class="headerlink" href="#file-level-metadata" title="Permanent link">&para;</a></h4>
+<p>The file level metadata is derived from the deposit as follows:</p>
+<p>From <code>&lt;bag&gt;/metadata/files.xml</code> the corresponding <code>&lt;file&gt;</code> element is looked up:</p>
+<ul>
+<li>The directory part of the <code>filepath</code> attribute is used for <code>directoryLabel</code></li>
+<li>The filename part is used as the file name (i.e. <code>label</code>).</li>
+<li>The child elements of <code>&lt;file&gt;</code> are used to <a href="#description-attribute">determine the description attribute in Dataverse</a> </li>
+<li>
+<p>If an <code>&lt;accessibleToRights&gt;</code> element is found then the dataset's accessibility is based on
+    the value in it:</p>
+<table>
+<thead>
+<tr>
+<th>accessibleToRights</th>
+<th>Restrict?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>KNOWN</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>NONE</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>RESTRICTED_REQUEST</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>ANONYMOUS</code></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p>Otherwise the dataset's accessibility is based on the <code>&lt;ddm:accessRights&gt;</code> value found in
+<code>&lt;bag&gt;/metadata/dataset.xml</code>: </p>
+<table>
+<thead>
+<tr>
+<th>accessRights</th>
+<th>Restrict?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>OPEN_ACCESS_FOR_REGISTERED_USERS</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>NO_ACCESS</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>REQUEST_PERMISSION</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>OPEN_ACCESS</code></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h5 id="description-attribute">Description attribute<a class="headerlink" href="#description-attribute" title="Permanent link">&para;</a></h5>
+<p>In Dataverse a file has a description attribute. The value of this attribute is used to include child elements
+of the source <code>&lt;file&gt;</code> element in <code>&lt;bag&gt;/metadata/files.xml</code>. These elements are displayed in the Dataverse
+description attribute as follows:</p>
+<div class="codehilite"><pre><span></span>key1: &quot;value1&quot;; key2: &quot;value2&quot;; ... 
+</pre></div>
+<p>Multiple values for one key are separted by commas:</p>
+<div class="codehilite"><pre><span></span>key1: &quot;value1a&quot;, &quot;value1b&quot;; key2: &quot;value2a&quot;, &quot;value2b&quot;; ... 
+</pre></div>
+<p>The source element is either</p>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;keyvaluepair&gt;</span>
+  <span class="nt">&lt;key&gt;</span>key<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;value&gt;</span>value<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;/keyvaluepair&gt;</span>
+</pre></div>
+<p>or </p>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;key&gt;</span>value<span class="nt">&lt;/key&gt;</span>
+</pre></div>
+<p>if <code>key</code> is one of the following:</p>
+<ul>
+<li><code>description</code></li>
+<li><code>title</code>  </li>
+<li><code>hardware</code></li>
+<li><code>original_OS</code></li>
+<li><code>software</code></li>
+<li><code>notes</code></li>
+<li><code>case_quantity</code></li>
+<li><code>file_category</code></li>
+<li><code>othmat_codebook</code></li>
+<li><code>data_collector</code></li>
+<li><code>collection_date</code></li>
+<li><code>time_period</code> </li>
+<li><code>geog_cover</code></li>
+<li><code>geog_unit</code></li>
+<li><code>local_georef</code></li>
+<li><code>mapprojection</code></li>
+<li><code>analytic_units</code></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>If there is only one key-value pair and its key is 'description', the value is used a the value for the 
+  decsription attribute without the aformentioned formatting;</li>
+<li>Any title key-value-pair that thas a value equal to the filename (case insensitively) is omitted.</li>
+</ul>
+</div>
+<h4 id="permission-requests">Permission requests<a class="headerlink" href="#permission-requests" title="Permanent link">&para;</a></h4>
+<p>In Dataverse permission requests can be enabled only at the dataset level. It is not possible to allow permission requests for
+one file and disallow them for another file in the same dataset (even if the two files are in different versions). The following
+rule will be applied to enabled or disable permission requests:</p>
+<p><em>If one or more files in the dataset (in any of its version) have an (effective) accessibility of <code>NONE</code>, permission requests will
+be disabled; otherwise they will be enabled.</em> </p>
+<p>Note that it is therefore possible for an update deposit to disable permission requests on a dataset, but not to enable them.</p>
+<h3 id="importing-pre-staged-files">Importing pre-staged files<a class="headerlink" href="#importing-pre-staged-files" title="Permanent link">&para;</a></h3>
+<h4 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h4>
+<p>Pre-staged files are files that are uploaded to the final location in storage prior to running the <code>import</code> command. For this
+to work the location must conform to the storage scheme that Dataverse uses. Unfortunately this scheme does not seem to be documented.</p>
+<p>For the migration from EASY the following procedure is envisioned:</p>
+<ol>
+<li>Import a batch of deposits the regular way, so without prestaging files.</li>
+<li>Test metadata mapping + fix problems in software.</li>
+<li>Remove Dataverse, including database, but excluding files in file storage (object store or disk). </li>
+<li>Reinstall Dataverse and other components.</li>
+<li>Import batch again, but now with pre-staged files.</li>
+</ol>
+<h4 id="mechanics">Mechanics<a class="headerlink" href="#mechanics" title="Permanent link">&para;</a></h4>
+<p>To be able to import pre-staged files <code>dd-dans-deposit-to-dataverse</code> needs some metadata about those files. This metadata
+can be loaded into a database by <a href="https://dans-knaw.github.io/dd-migration-info/" target="_blank"><code>dd-migration-info</code></a> after step 2 and then 
+accessed in step 5 by <code>dd-dans-deposit-to-dataverse</code>. </p>
+<h2 id="arguments">ARGUMENTS<a class="headerlink" href="#arguments" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Options:
+
+  -h, --help      Show help message
+  -v, --version   Show version of this program
+
+Subcommands:
+  run-service   Starts DANS Deposit To Dataverse as a daemon that processes deposit directories as they appear in the configured inbox.
+  import        Imports one ore more deposits. Does not monitor for new deposits to arrive, but instead terminates after importing the batch.
+</code></pre></div>
+
+<h2 id="installation-and-configuration">INSTALLATION AND CONFIGURATION<a class="headerlink" href="#installation-and-configuration" title="Permanent link">&para;</a></h2>
+<p>Currently this project is built as an RPM package for RHEL7/CentOS7 and later. The RPM will install the binaries to
+<code>/opt/dans.knaw.nl/dd-dans-deposit-to-dataverse</code> and the configuration files to <code>/etc/opt/dans.knaw.nl/dd-dans-deposit-to-dataverse</code>.</p>
+<p>To install the module on systems that do not support RPM, you can copy and unarchive the tarball to the target host.
+You will have to take care of placing the files in the correct locations for your system yourself. For instructions
+on building the tarball, see next section.</p>
+<h2 id="building-from-source">BUILDING FROM SOURCE<a class="headerlink" href="#building-from-source" title="Permanent link">&para;</a></h2>
+<p>Prerequisites:</p>
+<ul>
+<li>Java 8 or higher</li>
+<li>Maven 3.3.3 or higher</li>
+<li>RPM</li>
+</ul>
+<p>Steps:</p>
+<div class="codehilite"><pre><span></span><code>git clone https://github.com/DANS-KNAW/dd-dans-deposit-to-dataverse.git
+cd dd-dans-deposit-to-dataverse 
+mvn clean install
+</code></pre></div>
+
+<p>If the <code>rpm</code> executable is found at <code>/usr/local/bin/rpm</code>, the build profile that includes the RPM
+packaging will be activated. If <code>rpm</code> is available, but at a different path, then activate it by using
+Maven's <code>-P</code> switch: <code>mvn -Pprm install</code>.</p>
+<p>Alternatively, to build the tarball execute:</p>
+<div class="codehilite"><pre><span></span><code>mvn clean install assembly:single
+</code></pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+        
+          <a href="deposit-directory/" title="Deposit directory" class="md-flex md-footer-nav__link md-footer-nav__link--next head-type" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                Deposit directory
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        <div>
+          
+          powered by
+          <a href="https://www.mkdocs.org">MkDocs</a>
+          and
+          <a href="https://squidfunk.github.io/mkdocs-material/">
+            Material for MkDocs</a>
+          customised by
+          <a href="https://github.com/Dans-labs">Dans-labs</a>
+        </div>
+      </div>
+      <div class="md-footer-dans">
+  <div>DANS is an institute of KNAW and NWO</div>
+  <div>
+    <a href="https://dans.knaw.nl/en" title="Data Archiving and Networked Services (DANS)"><img class="md-footer-dans__img" src="assets/images/DANS.gif" height="50"></a>
+    <a target="_blank" href="https://www.knaw.nl/en"><img src="assets/images/knaw.png" height="50"></a>
+    <a target="_blank" href="https://www.nwo.nl/en"><img src="assets/images/nwo.png" height="50"></a>
+  </div>
+  <div><i>Driven by data</i></div>
+</div>
+      
+  <link rel="stylesheet" href="assets/fonts/font-awesome.css">
+  <style>.md-footer-social__desc{font-family:"Open Sans",sans-serif;-webkit-font-smoothing:auto}</style>
+  <ul class="md-footer-social">
+    
+    <li class="md-footer-social__li">
+      <a href="http://eepurl.com/dvnr8D" class="md-footer-social__link fa fa-envelope-square">
+        <span class="md-footer-social__desc">Newsletter</span>
+      </a>
+    </li>
+    
+    <li class="md-footer-social__li">
+      <a href="https://twitter.com/DANSKNAW" class="md-footer-social__link fa fa-twitter-square">
+        <span class="md-footer-social__desc">Twitter</span>
+      </a>
+    </li>
+    
+    <li class="md-footer-social__li">
+      <a href="https://www.youtube.com/user/DANSDataArchiving" class="md-footer-social__link fa fa-youtube-square">
+        <span class="md-footer-social__desc">YouTube</span>
+      </a>
+    </li>
+    
+    <li class="md-footer-social__li">
+      <a href="https://www.linkedin.com/company/dans" class="md-footer-social__link fa fa-linkedin-square">
+        <span class="md-footer-social__desc">LinkedIn</span>
+      </a>
+    </li>
+    
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/application.f780ca69.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      
+    
+  </body>
+</html>
